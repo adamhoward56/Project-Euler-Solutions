@@ -4,8 +4,7 @@ prime = []
 
 # Generate given number of Fibonacci numbers
 def generateFib():
-	fib_count = int(input("Enter the number of fibonacci numbers to include: "))
-	for i in range (0,fib_count):
+	for i in range (0,22):
 		s = 0
 		if (len(fib) == 0):
 			fib.append(1)
@@ -44,7 +43,7 @@ def init():
 	print("\nFibonacci Numbers: " + str(fib))
 	generatePrime()
 	print("\nPrime Numbers: " + str(prime))
-
+	print(len(fib))
 	print()
 
 init()
