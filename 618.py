@@ -1,6 +1,5 @@
 fib = []
 #factors = []
-total = 0
 prime = []
 sums = []
 # Generate given number of Fibonacci numbers
@@ -62,9 +61,10 @@ def init():
 		sums.append(sum(prime_factors(d)))
 		d = d + 1
 	u = 0
-	while u <= len(fib):
+	total = 0
+	while u <= len(fib)-1:
 		e = 0
-		while e <= len(sums):
+		while e <= len(sums)-1:
 			if sums[e] == fib[u]:
 				total = total + e
 			e = e + 1
