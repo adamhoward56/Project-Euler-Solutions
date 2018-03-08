@@ -66,7 +66,7 @@ def init():
 		e = 0
 		while e <= len(sums):
 			if sums[e] == fib[u]:
-				total = total + sums[e]
+				total = total + e
 			e = e + 1
 		u = u + 1
 	print(total)
