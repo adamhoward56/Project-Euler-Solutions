@@ -69,7 +69,7 @@ def init():
 				total = total + sums[e]
 		e = e + 1
 	u = u + 1
-print(total)
+	print(total)
 
 
 init()
