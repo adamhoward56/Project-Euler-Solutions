@@ -1,8 +1,11 @@
+#
+# Project Euler problem 618, with contributions from Bennett Yardley & Brett Coury
+#
+
 fib = []
-#factors = []
 prime = []
 
-# Generate given number of Fibonacci numbers
+# Generates given amount of Fibonacci numbers
 def generateFib():
 	fib_count = int(input("Enter the number of fibonacci numbers to include: "))
 	for i in range (0,fib_count):
@@ -11,6 +14,7 @@ def generateFib():
 			fib.append(1)
 		fib.append(fib[i-1] + fib[i])
 
+# Generate an array of prime numbers
 def generatePrime():
 	for i in range(2,522):
 		p = True
@@ -21,10 +25,12 @@ def generatePrime():
 		if p == True:
 			prime.append(i)
 
+# Returns the sum of the prime factors of a given number
 def getPrimeFactorSum(x):
 	f = []
 	num = x
 	i = 0
+	s = 0
 	while i < len(prime):
 		if num == prime[i]:
 			f.append(prime[i])
@@ -33,10 +39,10 @@ def getPrimeFactorSum(x):
 			num = num/prime[i]
 		else:
 			i = i + 1
-	#factors.append(f)
+	for e in f:
+		s = s + e
 
-	s = 0
-	#for i in # Finish this line 
+	return s
 
 # Start the program
 def init():
