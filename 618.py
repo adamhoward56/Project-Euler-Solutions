@@ -1,7 +1,8 @@
 fib = []
 #factors = []
+total = 0
 prime = []
-
+sums = []
 # Generate given number of Fibonacci numbers
 def generateFib():
 	for i in range (0,22):
@@ -36,14 +37,36 @@ def getPrimeFactorSum(x):
 
 	s = 0
 	#for i in # Finish this line 
-
+	
+def prime_factors(n):
+    i = 2
+    factors = []
+    while i * i <= n:
+        if n % i:
+            i += 1
+        else:
+            n //= i
+            factors.append(i)
+    if n > 1:
+        factors.append(n)
+    return factors
+    
 # Start the program
 def init():
 	generateFib()
 	print("\nFibonacci Numbers: " + str(fib))
 	generatePrime()
 	print("\nPrime Numbers: " + str(prime))
-	print(len(fib))
-	print()
+	d = 0
+	while d <= 2**23184:
+		sums.append(sum(prime_factors(d)))
+		d = d + 1
+	u = 0
+	while u <= len(fib):
+		e = 0
+		while e <= len(sums):
+			if sums[e] == fib[u]:
+				total = total + sums[e]
+
 
 init()
